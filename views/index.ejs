@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-5 vh-100">
+      <a href="/new">
+        <div class="btn btn-primary">New message</div>
+      </a>
+      <div class="cards">
+        <% for (let i = 0; i < messages.length; ++i) { const message =
+        messages[i]; %>
+        <div class="row gy-5">
+          <div class="card col" style="width: 18rem">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><%= message.text %></li>
+              <li class="list-group-item"><%= message.user %></li>
+              <li class="list-group-item"><%= message.added %></li>
+            </ul>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
